@@ -1,0 +1,171 @@
+/* start variablse */
+:root{
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+/* end variablse */
+/* start global rulse */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* font-family: 'Fraunces', serif; */
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--Cream);
+}
+.container {
+  padding: auto;
+  margin: 0 auto;
+}
+/* start media */
+/* small */
+@media (min-width: 768px) {
+  .container {
+      width: 748px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 972px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+/* end media */
+/* end global rulse */
+/* start card */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 17.65px);
+  padding: 20px;
+}
+.container .card {
+  background-color: var(--White);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .card img {
+  width: -webkit-fill-available;
+}
+.container .card .desktop-img {
+  display: none;
+}
+.container .card .text {
+  padding: 20px;
+}
+.container .card .text .type {
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+.container .card .text .name {
+  font-family: 'Fraunces', serif;
+  margin: 0.5em 0;
+  color: var(--Very-dark-blue);
+}
+.card .text .des {
+  color: var(--Dark-grayish-blue);
+  font-size: 14px;
+  line-height: 20px;
+}
+.card .text .pri {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 25px 0 15px;
+}
+.card .text .pri .pri-aft {
+  font-family: 'Fraunces', serif;
+  color: var(--Dark-cyan);
+  font-size: 33px;
+}
+.card .text .pri .pri-bef {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+.card .text button {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  height: 50px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.card .text button i {
+  font-size: 16px;
+  margin-right: 5px;
+}
+body .attribution {
+  color: var(--Very-dark-blue);
+}
+body .attribution a {
+  color: var(--Dark-cyan);
+}
+@media (min-width: 768px) {
+  .container .card {
+    display: flex;
+    width: 800px;
+  }
+  .container .card .mobile-img {
+    display: none;
+  }
+  .container .card .desktop-img {
+    display: unset;
+    height: 600px;
+    width: unset;
+  }
+  .container .card .text {
+    padding: 40px;
+  }
+  .container .card .text .type {
+    margin-bottom: 25px;
+    font-size: 17px;
+    letter-spacing: 6px;
+  }
+  .container .card .text .name {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 30px;
+  }
+  .container .card .text .des {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 40px;
+  }
+  .card .text .pri {
+    gap: 28px;
+    margin-bottom: 35px;
+  }
+  .card .text .pri .pri-aft {
+    font-size: 46px;
+  }
+  .card .text .pri .pri-bef {
+    font-size: 18px;
+  }
+  .card .text button {
+    height: 60px;
+    font-size: 18px;
+  }
+  .card .text button i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+/* end card */
